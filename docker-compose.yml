@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  breadmachine:
+    image: ghcr.io/insertish/breadmachine:main
+    ports:
+      - "4200:4200"
+    restart: always
+    volumes:
+      # breadboard configuration
+      - ./config:/root/__breadboard__
+
+      # copy docker-breadboard.yml with this compose file
+      - ./docker-breadboard.yml:/usr/src/app/dev/breadboard.yaml
+
+      # specify source directories:
+      - ~/stable-diffusion-webui/outputs:/root/stable-diffusion

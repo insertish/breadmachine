@@ -1,0 +1,6 @@
+port: 4200
+folders:
+  - ~/stable-diffusion
+#accounts:
+#  admin: password
+#  user: userpassword
